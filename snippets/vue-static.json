@@ -1,0 +1,51 @@
+{
+    "icon": [{
+        "prefix": "f7:icon",
+        "description": "Default icon",
+        "body": [
+            "<f7-icon icon=\"icon-$1\"></f7-icon>"
+        ]
+    }, {
+        "prefix": "f7:icon:custom",
+        "description": "Some custom icon",
+        "body": [
+            "<f7-icon icon=\"icon-$1\"></f7-icon>"
+        ]
+    }, {
+        "prefix": "f7:icon:f7",
+        "description": "F7 Icons font icon",
+        "body": [
+            "<f7-icon f7=\"$1\"></f7-icon>"
+        ]
+    }, {
+        "prefix": "f7:icon:material",
+        "description": "Material Icons font icon",
+        "body": [
+            "<f7-icon material=\"$1\"></f7-icon>"
+        ]
+    }, {
+        "prefix": "f7:icon:fa",
+        "description": "Font Awesome icons font icon",
+        "body": [
+            "<f7-icon fa=\"$1\"></f7-icon>"
+        ]
+    }, {
+        "prefix": "f7:icon:ion",
+        "description": "Ionicons icons font icon",
+        "body": [
+            "<f7-icon ion=\"$1\"></f7-icon>"
+        ]
+    }, {
+        "prefix": "f7:icon:size",
+        "description": "F7 icons font icon with custom size and color",
+        "body": [
+            "<f7-icon f7=\"$1\" size=\"44px\" color=\"blue\"></f7-icon>"
+        ]
+    }, {
+        "prefix": "f7:icon:condition",
+        "description": "Conditional icon",
+        "body": [
+            "<f7-icon ios=\"f7:$1\" md=\"material:$1\"></f7-icon>"
+        ]
+    }]
+}

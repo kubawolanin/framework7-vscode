@@ -7,10 +7,17 @@ const frameworks = ['vue', 'react'];
 
 const componentsPath = framework => `./framework7/src/pug/${framework}/`;
 const exclusions = [
+    'app-layout.pug',
+    'colors.pug',
+    'introduction.pug',
+    'navigation-router.pug',
+    'package.pug',
+    'icon.pug',
     'index.pug',
     'init-app.pug',
     'installation.pug',
     'kitchen-sink.pug',
+    'statusbar.pug',
     'vue-component-extensions.pug',
     'react-component-extensions.pug'
 ];
@@ -43,7 +50,8 @@ async function getSnippets(component, framework) {
 
         const examples = section
             .split('h4')
-            .map(t => t.trim()).filter(n => n);
+            .map(t => t.trim())
+            .filter(n => n);
 
         const componentSnippets = examples.map(example => {
             const parts = example
@@ -58,7 +66,10 @@ async function getSnippets(component, framework) {
                     '' : description,
                 body: parts
                     .filter(n => !n.trim().startsWith(':code'))
-                    .map(l => l.replace(' '.repeat(12), ''))
+                    .map(l =>
+                        l.replace(' '.repeat(12), '')
+                        .replace(' '.repeat(10), '')
+                    )
             }
         });
 
