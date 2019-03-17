@@ -7,9 +7,10 @@ const frameworks = ['vue', 'react'];
 
 const componentsPath = framework => `./framework7/src/pug/${framework}/`;
 const exclusions = [
-    'index',
-    'init-app',
-    'installation',
+    'index.pug',
+    'init-app.pug',
+    'installation.pug',
+    'kitchen-sink.pug',
     'vue-component-extensions.pug',
     'react-component-extensions.pug'
 ];
@@ -53,7 +54,8 @@ async function getSnippets(component, framework) {
 
             return {
                 prefix: `f7:${component}`,
-                description: description.startsWith(':code') ? '' : description,
+                description: description.startsWith(':code') ?
+                    '' : description,
                 body: parts
                     .filter(n => !n.trim().startsWith(':code'))
                     .map(l => l.replace(' '.repeat(12), ''))
