@@ -7,7 +7,10 @@ const frameworks = ['vue', 'react'];
 
 const componentsPath = framework => `./framework7/src/pug/${framework}/`;
 const exclusions = [
-    'vue-component-extensions.pug'
+    'index',
+    'init-app',
+    'installation',
+    'vue-component-extensions.pug',
     'react-component-extensions.pug'
 ];
 
@@ -77,7 +80,7 @@ async function getSnippets(component, framework) {
 })();
 
 const getDocs = (component, framework) =>
-    `https://framework7.io/${framework}/${component}.html`;
+    `<a href="https://framework7.io/${framework}/${component}.html">${component} Documentation</a>`;
 
 const getUrl = component =>
     `https://raw.githubusercontent.com/framework7io/framework7-website/master/src/pug/${framework}/${component}.pug`;
