@@ -1,0 +1,9 @@
+# Clone framework7
+
+mkdir framework7
+cd framework7
+git init
+git remote add origin -f https://github.com/framework7io/framework7-website/
+git config core.sparseCheckout true
+echo "src/pug/vue/" >> .git/info/sparsecheckout
+git pull origin master

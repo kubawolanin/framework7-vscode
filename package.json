@@ -1,0 +1,28 @@
+{
+    "name": "framework7-snippets",
+    "displayName": "Framework7 Snippets",
+    "description": "Collection of snippets for Framework7",
+    "version": "0.0.1",
+    "publisher": "Kuba Wolanin",
+    "engines": {
+        "vscode": "^1.28.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [{
+                "language": "vue-html",
+                "path": "./snippets/vue.json"
+            },
+            {
+                "language": "vue",
+                "path": "./snippets/vue.json"
+            },
+            {
+                "language": "javascriptreact",
+                "path": "./snippets/react.json"
+            }
+        ]
+    }
+}
